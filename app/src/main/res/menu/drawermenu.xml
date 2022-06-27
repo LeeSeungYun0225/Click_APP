@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+        <item android:title="설정">
+            <group>
+                <menu>
+            <item
+                android:id="@+id/espConnection"
+                android:title="ESP 연결"
+                android:icon ="@drawable/esp_img"
+              />
+                </menu>
+            </group>
+
+        </item>
+
+            <item android:title="서비스"
+                >
+                <menu>
+
+                    <item
+                        android:id="@+id/info"
+                        android:title="앱 정보"
+                        android:icon= "@drawable/info"
+                        ></item>
+                </menu>
+            </item>
+
+</menu>
+
+

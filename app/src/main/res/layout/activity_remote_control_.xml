@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@drawable/test"
+    tools:context=".RemoteControl_Activity">
+
+
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:text="기기 명"
+        android:textColor="@android:color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:id="@+id/Text_ModelName"
+        android:typeface="normal" />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageButton
+            android:layout_marginLeft = "30dp"
+            android:background="@drawable/mute"
+            android:layout_width="wrap_content"
+            android:id="@+id/Image_mute"
+            android:layout_height="wrap_content" />
+        <ImageButton
+
+            android:layout_marginLeft="130dp"
+            android:id="@+id/Image_OnOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_onoff"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity = "center"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Image_One"
+                android:background="@drawable/selector_one"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Image_Two"
+                android:background="@drawable/selector_two"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_three"
+                android:id="@+id/Image_Three"
+                />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity = "center"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Image_Four"
+                android:background="@drawable/selector_four"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Image_Five"
+                android:background="@drawable/selector_five"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Image_Six"
+                android:background="@drawable/selector_six"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity = "center"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_seven"
+                android:id="@+id/Image_Seven"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_eight"
+                android:id="@+id/Image_Eight"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:background="@drawable/selector_nine"
+                android:id="@+id/Image_Nine"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity = "center"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_zero"
+                android:id="@+id/Image_Zero"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity = "center"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor = "@android:color/black"
+                    android:textStyle="bold"
+                    android:textSize = "20sp"
+                    android:text = "음량"/>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_vol_chan_up"
+                    android:id="@+id/Image_VolUp"
+                    />
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Image_VolDown"
+                    android:background="@drawable/selector_vol_chan_down"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize = "20sp"
+                    android:textColor = "@android:color/black"
+                    android:text = "채널"/>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Image_ChanUp"
+                    android:background="@drawable/selector_vol_chan_up"/>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Image_ChanDown"
+                    android:background="@drawable/selector_vol_chan_down"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        >
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="닫기"
+            android:onClick="finish"
+            android:layout_marginBottom="20dp"
+            />
+
+    </LinearLayout>
+</LinearLayout>

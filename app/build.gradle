@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        pickFirst 'lib/armeabi-v7a/libassmidi.so'
+        pickFirst 'lib/x86/libassmidi.so'
+    }
+
+    android {
+        lintOptions {
+            checkReleaseBuilds false
+            // Or, if you prefer, you can continue to check for errors in release builds,
+            // but continue the build even when errors are found:
+            abortOnError false
+        }
+    }
+    defaultConfig {
+        applicationId "com.espressif.iot_esptouch_demo"
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 20
+        versionName "0.3.7.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+
+        }
+    }
+}
+
+dependencies {
+
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation project(':click')
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.1'
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.6'
+    implementation 'com.google.android.gms:play-services-location:11.0.1'
+
+}

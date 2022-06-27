@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/info"
+        android:orderInCategory="0"
+        android:icon = "@drawable/info2"
+        android:title="info"
+        app:showAsAction="always">
+        <menu>
+
+            <item
+                android:id="@+id/editpass"
+                android:title="비밀번호 변경" />
+
+            <item
+                android:id="@+id/editemail"
+                android:title="이메일 변경" />
+        </menu>
+    </item>
+
+
+</menu>

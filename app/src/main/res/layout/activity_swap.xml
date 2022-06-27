@@ -1,0 +1,1473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start"
+    >
+
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="horizontal"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_purple"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:layout_marginTop="55dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/weather_image"
+
+                    />
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="날씨 데이터를"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:id="@+id/Text_Weather_Here"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text = "받아오고 있습니다."
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:id="@+id/Text_NULL"
+                    />
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:id="@+id/Text_Temp"
+                    android:gravity="center"
+                    />
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:id="@+id/Text_Humid"
+                        />
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:id="@+id/Text_Wind_Speed"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/devL1"
+                android:background="@drawable/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <Button
+                    android:onClick = "onAddBtnClick1"
+                    android:id = "@+id/addToggle1"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft = "18dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text = "+"
+                    android:background = "@android:color/black"
+                    android:visibility="visible"
+                    android:textColor = "@android:color/white"
+                    />
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:orientation="vertical">
+                <TextView
+                    android:id="@+id/appliance1"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="디바이스를 추가해주세요."
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation = "horizontal">
+                        <RadioGroup
+                            android:visibility="gone"
+                            android:orientation="horizontal"
+                            android:id = "@+id/Radio1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <RadioButton
+                                android:id = "@+id/OnSwitch1"
+                                android:layout_width="60dp"
+                                android:layout_height="30dp"
+                                android:text = "ON"
+                                android:visibility="visible"
+                                android:textColor = "@android:color/white"
+
+                                />
+                                <RadioButton
+                                    android:id = "@+id/OffSwitch1"
+                                    android:layout_width="70dp"
+                                    android:layout_height="30dp"
+                                    android:text = "OFF"
+                                    android:visibility="visible"
+                                    android:textColor = "@android:color/white"
+                                    />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:layout_gravity="right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinner1"
+                        android:background="@drawable/btn"
+                        android:visibility="gone"
+                        >
+
+                    </Spinner>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/devL2"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <Button
+                    android:onClick = "onAddBtnClick2"
+                    android:id = "@+id/addToggle2"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft = "18dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text = "+"
+                    android:background = "@android:color/black"
+                    android:visibility="visible"
+                    android:textColor = "@android:color/white"
+                    />
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/appliance2"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="디바이스를 추가해주세요."
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation = "horizontal">
+                        <RadioGroup
+                            android:visibility="gone"
+                            android:orientation="horizontal"
+                            android:id = "@+id/Radio2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        <RadioButton
+                            android:id = "@+id/OnSwitch2"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:text = "ON"
+                            android:visibility="visible"
+                            android:textColor = "@android:color/white"
+
+                            />
+                        <RadioButton
+                            android:id = "@+id/OffSwitch2"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:text = "OFF"
+                            android:visibility="visible"
+                            android:textColor = "@android:color/white"
+                            />
+                       </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:layout_gravity="right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinner2"
+                        android:background="@drawable/btn"
+                        android:visibility="gone"
+                        >
+
+                    </Spinner>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/devL3"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <Button
+                    android:onClick = "onAddBtnClick3"
+                    android:id = "@+id/addToggle3"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft = "18dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text = "+"
+                    android:background = "@android:color/black"
+                    android:visibility="visible"
+                    android:textColor = "@android:color/white"
+                    />
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/appliance3"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="디바이스를 추가해주세요."
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation = "horizontal">
+                        <RadioGroup
+                            android:visibility="gone"
+                            android:orientation="horizontal"
+                            android:id = "@+id/Radio3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        <RadioButton
+                            android:id = "@+id/OnSwitch3"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:text = "ON"
+                            android:visibility="visible"
+                            android:textColor = "@android:color/white"
+
+                            />
+                        <RadioButton
+                            android:id = "@+id/OffSwitch3"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:text = "OFF"
+                            android:visibility="visible"
+                            android:textColor = "@android:color/white"
+                            />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:layout_gravity="right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinner3"
+                        android:background="@drawable/btn"
+                        android:visibility="gone"
+                        >
+
+                    </Spinner>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/devL4"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <Button
+                    android:onClick = "onAddBtnClick4"
+                    android:id = "@+id/addToggle4"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft = "18dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text = "+"
+                    android:background = "@android:color/black"
+                    android:visibility="visible"
+                    android:textColor = "@android:color/white"
+                    />
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/appliance4"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="디바이스를 추가해주세요."
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation = "horizontal">
+                        <RadioGroup
+                            android:visibility="gone"
+                            android:id = "@+id/Radio4"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        <RadioButton
+                            android:id = "@+id/OnSwitch4"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:text = "ON"
+                            android:visibility="visible"
+                            android:textColor = "@android:color/white"
+
+                            />
+                        <RadioButton
+                            android:id = "@+id/OffSwitch4"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:text = "OFF"
+                            android:visibility="visible"
+                            android:textColor = "@android:color/white"
+                            />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:layout_gravity="right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinner4"
+                        android:background="@drawable/btn"
+                        android:visibility="gone"
+                        >
+
+                    </Spinner>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/devL5"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <Button
+                    android:onClick = "onAddBtnClick5"
+                    android:id = "@+id/addToggle5"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft = "18dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text = "+"
+                    android:background = "@android:color/black"
+                    android:visibility="visible"
+                    android:textColor = "@android:color/white"
+                    />
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/appliance5"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="디바이스를 추가해주세요."
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation = "horizontal">
+                        <RadioGroup
+                            android:visibility="gone"
+                            android:id = "@+id/Radio5"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        <RadioButton
+                            android:id = "@+id/OnSwitch5"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:text = "ON"
+                            android:visibility="visible"
+                            android:textColor = "@android:color/white"
+
+                            />
+                        <RadioButton
+                            android:id = "@+id/OffSwitch5"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:text = "OFF"
+                            android:visibility="visible"
+                            android:textColor = "@android:color/white"
+                            />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:layout_gravity="right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinner5"
+                        android:background="@drawable/btn"
+                        android:visibility="gone"
+                        >
+
+                    </Spinner>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/devL6"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <Button
+                    android:onClick = "onAddBtnClick6"
+                    android:id = "@+id/addToggle6"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft = "18dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text = "+"
+                    android:background = "@android:color/black"
+                    android:visibility="visible"
+                    android:textColor = "@android:color/white"
+                    />
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/appliance6"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="디바이스를 추가해주세요."
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation = "horizontal">
+                        <RadioGroup
+                            android:visibility="gone"
+                            android:id = "@+id/Radio6"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        <RadioButton
+                            android:id = "@+id/OnSwitch6"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:text = "ON"
+                            android:visibility="visible"
+                            android:textColor = "@android:color/white"
+
+                            />
+                        <RadioButton
+                            android:id = "@+id/OffSwitch6"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:text = "OFF"
+                            android:visibility="visible"
+                            android:textColor = "@android:color/white"
+                            />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:layout_gravity="right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinner6"
+                        android:background="@drawable/btn"
+                        android:visibility="gone"
+                        >
+
+                    </Spinner>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:id="@+id/Recp_layout_1"
+                android:background="@drawable/back2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:onClick = "Delete_Recipe1"
+                    android:id="@+id/Recp_DeleteBtn_1"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft = "18dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background = "@android:color/black"
+                    android:visibility="visible"
+                    android:textColor = "@android:color/white"
+                    android:text = "-"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Recp_Dev_Name_1"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text  = "레시피 기기명"
+                        />
+                    <Switch
+                        android:id="@+id/Recp_Switch_1"
+                        android:checked = "false"
+                        android:textOn="On"
+                        android:textOff= "Off"
+                        android:textSize="15dp"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Recp_if_text_1"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text = "조건"
+                        />
+                    <TextView
+                        android:id="@+id/Recp_then_text_1"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text = "실행"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+
+                android:id="@+id/Recp_layout_2"
+                android:background="@drawable/back2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:onClick = "Delete_Recipe2"
+                    android:id="@+id/Recp_DeleteBtn_2"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft = "18dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background = "@android:color/black"
+                    android:visibility="visible"
+                    android:textColor = "@android:color/white"
+                    android:text = "-"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Recp_Dev_Name_2"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text  = "레시피 기기명"
+                        />
+                    <Switch
+                        android:id="@+id/Recp_Switch_2"
+                        android:checked = "false"
+                        android:textOn="On"
+                        android:textOff= "Off"
+                        android:textSize="15dp"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Recp_if_text_2"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text = "조건"
+                        />
+                    <TextView
+                        android:id="@+id/Recp_then_text_2"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text = "실행"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:visibility="gone"
+
+                android:id="@+id/Recp_layout_3"
+                android:background="@drawable/back2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:onClick = "Delete_Recipe3"
+                    android:id="@+id/Recp_DeleteBtn_3"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft = "18dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background = "@android:color/black"
+                    android:visibility="visible"
+                    android:textColor = "@android:color/white"
+                    android:text = "-"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Recp_Dev_Name_3"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text  = "레시피 기기명"
+                        />
+                    <Switch
+                        android:id="@+id/Recp_Switch_3"
+                        android:checked = "false"
+                        android:textOn="On"
+                        android:textOff= "Off"
+                        android:textSize="15dp"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Recp_if_text_3"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text = "조건"
+                        />
+                    <TextView
+                        android:id="@+id/Recp_then_text_3"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text = "실행"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+
+                android:id="@+id/Recp_layout_4"
+                android:background="@drawable/back2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:onClick = "Delete_Recipe4"
+                    android:id="@+id/Recp_DeleteBtn_4"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft = "18dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background = "@android:color/black"
+                    android:visibility="visible"
+                    android:textColor = "@android:color/white"
+                    android:text = "-"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Recp_Dev_Name_4"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text  = "레시피 기기명"
+                        />
+                    <Switch
+                        android:id="@+id/Recp_Switch_4"
+                        android:checked = "false"
+                        android:textOn="On"
+                        android:textOff= "Off"
+                        android:textSize="15dp"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Recp_if_text_4"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text = "조건"
+                        />
+                    <TextView
+                        android:id="@+id/Recp_then_text_4"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text = "실행"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+
+                android:id="@+id/Recp_layout_5"
+                android:background="@drawable/back2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:onClick = "Delete_Recipe5"
+                    android:id="@+id/Recp_DeleteBtn_5"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft = "18dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background = "@android:color/black"
+                    android:visibility="visible"
+                    android:textColor = "@android:color/white"
+                    android:text = "-"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Recp_Dev_Name_5"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text  = "레시피 기기명"
+                        />
+                    <Switch
+                        android:id="@+id/Recp_Switch_5"
+                        android:checked = "false"
+                        android:textOn="On"
+                        android:textOff= "Off"
+                        android:textSize="15dp"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Recp_if_text_5"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text = "조건"
+                        />
+                    <TextView
+                        android:id="@+id/Recp_then_text_5"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text = "실행"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+
+                android:id="@+id/Recp_layout_6"
+                android:background="@drawable/back2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:onClick = "Delete_Recipe6"
+                    android:id="@+id/Recp_DeleteBtn_6"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft = "18dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background = "@android:color/black"
+                    android:visibility="visible"
+                    android:textColor = "@android:color/white"
+                    android:text = "-"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Recp_Dev_Name_6"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text  = "레시피 기기명"
+                        />
+                    <Switch
+                        android:id="@+id/Recp_Switch_6"
+                        android:checked = "false"
+                        android:textOn="On"
+                        android:textOff= "Off"
+                        android:textSize="15dp"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Recp_if_text_6"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text = "조건"
+                        />
+                    <TextView
+                        android:id="@+id/Recp_then_text_6"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text = "실행"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+
+                android:id="@+id/Recp_layout_7"
+                android:background="@drawable/back2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:onClick = "Delete_Recipe7"
+                    android:id="@+id/Recp_DeleteBtn_7"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft = "18dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background = "@android:color/black"
+                    android:visibility="visible"
+                    android:textColor = "@android:color/white"
+                    android:text = "-"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Recp_Dev_Name_7"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text  = "레시피 기기명"
+                        />
+                    <Switch
+                        android:id="@+id/Recp_Switch_7"
+                        android:checked = "false"
+                        android:textOn="On"
+                        android:textOff= "Off"
+                        android:textSize="15dp"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Recp_if_text_7"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text = "조건"
+                        />
+                    <TextView
+                        android:id="@+id/Recp_then_text_7"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text = "실행"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+
+                android:id="@+id/Recp_layout_8"
+                android:background="@drawable/back2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:onClick = "Delete_Recipe8"
+                    android:id="@+id/Recp_DeleteBtn_8"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft = "18dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background = "@android:color/black"
+                    android:visibility="visible"
+                    android:textColor = "@android:color/white"
+                    android:text = "-"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Recp_Dev_Name_8"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text  = "레시피 기기명"
+                        />
+                    <Switch
+                        android:id="@+id/Recp_Switch_8"
+                        android:checked = "false"
+                        android:textOn="On"
+                        android:textOff= "Off"
+                        android:textSize="15dp"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Recp_if_text_8"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text = "조건"
+                        />
+                    <TextView
+                        android:id="@+id/Recp_then_text_8"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text = "실행"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:visibility="gone"
+
+                android:id="@+id/Recp_layout_9"
+                android:background="@drawable/back2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:onClick = "Delete_Recipe9"
+                    android:id="@+id/Recp_DeleteBtn_9"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft = "18dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background = "@android:color/black"
+                    android:visibility="visible"
+                    android:textColor = "@android:color/white"
+                    android:text = "-"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Recp_Dev_Name_9"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text  = "레시피 기기명"
+                        />
+                    <Switch
+                        android:id="@+id/Recp_Switch_9"
+                        android:checked = "false"
+                        android:textOn="On"
+                        android:textOff= "Off"
+                        android:textSize="15dp"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Recp_if_text_9"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text = "조건"
+                        />
+                    <TextView
+                        android:id="@+id/Recp_then_text_9"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text = "실행"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+
+                android:id="@+id/Recp_layout_10"
+                android:background="@drawable/back2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:onClick = "Delete_Recipe10"
+                    android:id="@+id/Recp_DeleteBtn_10"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft = "18dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background = "@android:color/black"
+                    android:visibility="visible"
+                    android:textColor = "@android:color/white"
+                    android:text = "-"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Recp_Dev_Name_10"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text  = "레시피 기기명"
+                        />
+                    <Switch
+                        android:id="@+id/Recp_Switch_10"
+                        android:checked = "false"
+                        android:textOn="On"
+                        android:textOff= "Off"
+                        android:textSize="15dp"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Recp_if_text_10"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text = "조건"
+                        />
+                    <TextView
+                        android:id="@+id/Recp_then_text_10"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text = "실행"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        </ScrollView>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolbar"
+            android:background="@drawable/background_purple"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+
+
+        </android.support.v7.widget.Toolbar>
+
+
+
+    </FrameLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_View"
+        android:layout_gravity="start"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        app:menu="@menu/drawermenu"
+        app:headerLayout="@layout/activity_nav_header"
+
+        ></android.support.design.widget.NavigationView>
+
+
+
+
+
+
+
+</android.support.v4.widget.DrawerLayout>

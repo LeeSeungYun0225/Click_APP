@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".AddAppliance">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_purple"
+            android:gravity="center"
+            android:text="기기 추가"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <Spinner
+            android:id = "@+id/manufact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Spinner>
+
+        <Spinner
+            android:id = "@+id/appliType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Spinner>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint = "사용자 설정 이름"
+            android:id="@+id/nickname"/>
+
+        <EditText
+            android:id="@+id/comment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="메모"
+           />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text = "완료"
+            android:onClick = "Complete"
+            />
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="취소"
+            android:onClick = "Cancelation"
+
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

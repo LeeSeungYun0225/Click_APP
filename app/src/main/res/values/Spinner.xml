@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="manufact">
+        <item>제조사를 선택 해 주세요.</item>
+        <item>삼성</item>
+        <item>LG</item>
+
+    </string-array>
+
+    <string-array name="type_Samsung">
+        <item>타입을 선택 해 주세요.</item>
+        <item>에어컨</item>
+        <item>TV</item>
+    </string-array>
+
+    <string-array name="type_LG">
+        <item>타입을 선택 해 주세요.</item>
+        <item>에어컨</item>
+        <item>TV</item>
+    </string-array>
+
+
+    <string-array name="TV">
+        <item>제어</item>
+        <item>볼륨▲</item>
+        <item>볼륨▼</item>
+        <item>채널▲</item>
+        <item>채널▼</item>
+        <item>음소거</item>
+        <item>리모컨</item>
+        <item>레시피</item>
+    </string-array>
+    <string-array name="Aircon">
+        <item>제어</item>
+        <item>온도설정</item>
+        <item>레시피</item>
+
+    </string-array>
+
+    <string-array name="Recep_type">
+        <item>실행 조건을 선택 해 주세요.</item>
+        <item>전화</item>
+        <item>온도</item>
+        <item>시간</item>
+    </string-array>
+
+    <string-array name="Recep_call">
+        <item>실행할 전화 상태를 선택 해 주세요.</item>
+        <item>전화 올 때</item>
+        <item>전화 걸 때</item>
+    </string-array>
+
+
+    <string-array name="Recep_temp">
+        <item>실행 온도를 선택 해 주세요.</item>
+        <item>15ºC</item>
+        <item>16ºC</item>
+        <item>17ºC</item>
+        <item>18ºC</item>
+        <item>19ºC</item>
+        <item>20ºC</item>
+        <item>21ºC</item>
+        <item>22ºC</item>
+        <item>23ºC</item>
+        <item>24ºC</item>
+        <item>25ºC</item>
+        <item>26ºC</item>
+        <item>27ºC</item>
+        <item>28ºC</item>
+        <item>29ºC</item>
+        <item>30ºC</item>
+        <item>31ºC</item>
+        <item>32ºC</item>
+        <item>33ºC</item>
+        <item>34ºC</item>
+        <item>35ºC</item>
+        <item>36ºC</item>
+        <item>37ºC</item>
+        <item>38ºC</item>
+
+    </string-array>
+
+    <string-array name="Recep_time_day">
+        <item>실행할 날을 선택 해 주세요.</item>
+        <item>매일</item>
+        <item>주중</item>
+        <item>주말</item>
+    </string-array>
+
+    <string-array name="Recep_time_hour">
+        <item>실행 시간을 선택 해 주세요.</item>
+        <item>0시</item>
+        <item>1시</item>
+        <item>2시</item>
+        <item>3시</item>
+        <item>4시</item>
+        <item>5시</item>
+        <item>6시</item>
+        <item>7시</item>
+        <item>8시</item>
+        <item>9시</item>
+        <item>10시</item>
+        <item>11시</item>
+        <item>12시</item>
+        <item>13시</item>
+        <item>14시</item>
+        <item>15시</item>
+        <item>16시</item>
+        <item>17시</item>
+        <item>18시</item>
+        <item>19시</item>
+        <item>20시</item>
+        <item>21시</item>
+        <item>22시</item>
+        <item>23시</item>
+    </string-array>
+
+    <string-array name="Recep_time_min">
+        <item>실행 분을 선택 해 주세요.</item>
+        <item>00분</item>
+        <item>15분</item>
+        <item>30분</item>
+        <item>45분</item>
+    </string-array>
+
+
+    <string-array name="Recep_TV">
+        <item>실행할 동작을 선택 해 주세요.</item>
+        <item>전원</item>
+        <item>음소거</item>
+        <item>채널변경</item>
+    </string-array>
+    <string-array name="Recep_Aircon">
+        <item>실행할 동작을 선택 해 주세요.</item>
+        <item>전원 켜기</item>
+        <item>전원 끄기</item>
+        <item>온도설정</item>
+
+    </string-array>
+
+
+
+
+
+
+
+
+</resources>
